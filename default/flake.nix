@@ -6,7 +6,7 @@
 
   outputs = inputs: {
 
-    nixosConfigurations.nixos = inputs.lib.nixosSystem {
+    nixosConfigurations.nixos = inputs.nixpkgs.lib.nixosSystem {
       modules = [
         { nix.settings.experimental-features = ["nix-command" "flakes"]; }
         ./configuration.nix
